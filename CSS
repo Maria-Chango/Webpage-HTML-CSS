@@ -1,0 +1,489 @@
+* {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+
+
+
+body {
+
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  color: #f5f5f5;
+  overflow-x: hidden;
+
+}
+
+
+
+
+
+/*NAVEGACION*/
+
+
+
+.top {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+}
+
+
+
+#nav-menu ul {
+
+  display: flex;
+  gap: 30px;
+  list-style: none;
+
+ 
+
+}
+
+
+
+#nav-menu a {
+
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+
+}
+
+
+
+#nav-menu a::after {
+
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #e69039;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+
+}
+
+
+
+#nav-menu a:hover::after {
+
+  width: 100%;
+
+}
+
+
+
+/* PRESENTACIÓN*/
+
+.fondo {
+
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Trebuchet MS', sans-serif;
+
+}
+
+
+
+.fondo::before {
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/fondo.avif');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+
+}
+
+
+
+.perfil-container {
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+ 
+
+}
+
+
+
+.texto-presentacion {
+
+  text-align: right;
+
+}
+
+
+
+
+
+/*TEXTO PRINCIPAL*/
+
+
+
+.texto-presentacion h1 {
+
+  font-size: 2.5rem;
+  margin: 0;
+
+}
+
+
+
+
+
+/*TEXTO SECUNDARIO*/
+
+
+
+.subtitle {
+
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+
+}
+
+
+
+.foto-perfil {
+
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  transform: translate(-20px, 6px);
+
+}
+
+
+
+/*MAIN Y SECCIONES GENERALES*/
+
+
+
+main {
+
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+
+}
+
+
+
+h2,
+
+h3 {
+
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #ffffff;
+
+}
+
+
+
+/*HABILIDADES*/
+
+
+
+.Habilidades {
+
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+}
+
+
+
+
+
+.hab-grid {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+
+}
+
+
+
+.hab-card {
+
+  background-color: #070505;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  border: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+
+.hab-card img {
+
+  border-radius: 15px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+
+}
+
+
+
+.hab-card:hover {
+
+  transform: translateY(-6px);
+  border-color: #e69039;
+
+}
+
+
+
+/*PROYECTOS (*/
+
+.proyectos {
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+}
+
+
+
+.proyectos h3 {
+
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: left;
+
+}
+
+
+
+.timeline {
+
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-left: 2px solid #333;
+  padding-left: 40px;
+
+}
+
+
+
+.item {
+
+  position: relative;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+
+}
+
+
+
+.punto {
+
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ff9900;
+  border-radius: 50%;
+  left: -47px;
+  top: 5px;
+
+}
+
+
+
+.contenido-izq {
+
+  flex: 1;
+
+}
+
+
+
+.contenido-izq h4 {
+
+  color: #ff9203;
+  font-size: 20px;
+
+}
+
+
+
+.contenido-der {
+
+  flex: 2;
+  color: #ccc;
+  line-height: 1.6;
+
+}
+
+
+
+.saber-mas {
+
+  display: inline-block;
+  margin-top: 15px;
+  color: #eba64d;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+
+
+/*SOBRE MÍ*/
+
+
+
+.sobre-sobre-mi {
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+}
+
+
+
+.sobre-mi-contenido {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+
+}
+
+
+
+.sobre-mi-text {
+
+  flex: 2;
+  font-family: 'Inter', sans-serif;
+  /* Fuente profesional aplicada */
+
+}
+
+
+
+.sobre-mi-text h2 {
+
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+
+
+
+.sobre-mi-text p {
+
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 17px;
+  color: #d1d5db;
+  text-align: left;
+
+}
+
+
+
+.resaltado {
+
+  color: #ff9203;
+  font-weight: 600;
+
+}
+
+
+
+/*CONTACTO Y FOOTER*/
+
+
+
+.contacto {
+
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+}
+
+
+
+.song-info {
+
+  margin-top: 20px;
+  color: #ccc;
+
+}
+
+
+
+footer {
+
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  border-top: 1px solid #111;
+  font-size: 14px;
+
+}
+
+
